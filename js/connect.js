@@ -103,6 +103,36 @@ const winningConditions = [
   [39, 31, 23, 15],
   [38, 30, 22, 14],
 ];
+
+
+const column1 = [
+  0, 7, 14, 21, 28, 35
+];
+
+const column2 = [
+  1, 8, 15, 22, 29, 36
+];
+
+const column3 = [
+  2, 9, 16, 23, 30, 37
+]
+
+const column4 = [
+  3, 10, 17, 24, 31, 38
+]
+
+const column5 = [
+  4, 11, 18, 25, 32, 39
+]
+
+const column6 = [
+  5, 12, 19, 26, 33, 40
+]
+
+const column7 = [
+  6, 13, 20, 27, 34, 41
+]
+
 ///////////////////// APP STATE (VARIABLES) /////////////////////////
 let board;
 let score;
@@ -182,13 +212,62 @@ function takeTurn(e) {
       return square === e.target;
     });
 
-    if (board[index] === "") {
-      board[index] = turn;
+    if (column1.includes(index)) {
+      let avail = -1;
+      for (const cell of column1) {
+        if (board[cell] === "") {
+          avail = cell;
+        }
+      }
+
+      board[avail] = turn;
       turn = turn === "red" ? "yellow" : "red";
       win = getWinner();
-
       render();
     }
+
+    // if (board[index + ((index - (35 + index)) * (-1))] === "") {
+    //   console.log(1);
+    //   board[index + ((index - (35 + index)) * (-1))] = turn;
+    //   turn = turn === "red" ? "yellow" : "red";
+    //   win = getWinner();
+    //
+    //   render()
+    // } else if (board[index + ((index - (35 + index)) * (-1))] !== "") {
+    //   console.log(2);
+    //   board[index + ((index - (28 + index)) * (-1))] = turn;
+    //   turn = turn === "red" ? "yellow" : "red";
+    //   win = getWinner();
+    //
+    //   render()
+    // } else if ((board[index + ((index - (28 + index)) * (-1))] !== "")) {
+    //   console.log(3);
+    //   board[index + ((index - (21 + index)) * (-1))] = turn;
+    //   turn = turn === "red" ? "yellow" : "red";
+    //   win = getWinner();
+    //
+    //   render()
+    // } else if (board[index + ((index - (21 + index)) * (-1))] !== "") {
+    //   board[index + ((index - (14 + index)) * (-1))] = turn;
+    //   turn = turn === "red" ? "yellow" : "red";
+    //   win = getWinner();
+    //
+    //   render()
+    // } else if (board[index + ((index - (14 + index)) * (-1))] !== "") {
+    //   board[index + ((index - (7 + index)) * (-1))] = turn;
+    //   turn = turn === "red" ? "yellow" : "red";
+    //   win = getWinner();
+    //
+    //   render()
+    // } else if (board[index + ((index - (7 + index)) * (-1))] !== "") {
+    //   board[index + ((index - (0 + index)) * (-1))] = turn;
+    //   turn = turn === "red" ? "yellow" : "red";
+    //   win = getWinner();
+    //
+    //   render()
+    // }
+
+
   }
 }
 

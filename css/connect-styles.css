@@ -38,6 +38,12 @@ h3 {
   margin: 2%;
 }
 
+p {
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: center;
+}
+
 /*
  * The container is a flex-box, which is a powerful layout tool. It grows
  * dyanamically, and allows us to position our elements with precision.
