@@ -185,7 +185,7 @@ function whoGoesFirst() {
 
 function render() {
   board.forEach(function(mark, index) {
-    squares[index].textContent = mark;
+    squares[index].style.backgroundColor = mark;
   });
 
   if (win === "red") {
@@ -224,50 +224,79 @@ function takeTurn(e) {
       turn = turn === "red" ? "yellow" : "red";
       win = getWinner();
       render();
+    } else if (column2.includes(index)) {
+      let avail = -1;
+      for (const cell of column2) {
+        if (board[cell] === "") {
+          avail = cell;
+        }
+      }
+
+      board[avail] = turn;
+      turn = turn === "red" ? "yellow" : "red";
+      win = getWinner();
+      render();
+    } else if (column3.includes(index)) {
+      let avail = -1;
+      for (const cell of column3) {
+        if (board[cell] === "") {
+          avail = cell;
+        }
+      }
+
+      board[avail] = turn;
+      turn = turn === "red" ? "yellow" : "red";
+      win = getWinner();
+      render();
+    } else if (column4.includes(index)) {
+      let avail = -1;
+      for (const cell of column4) {
+        if (board[cell] === "") {
+          avail = cell;
+        }
+      }
+
+      board[avail] = turn;
+      turn = turn === "red" ? "yellow" : "red";
+      win = getWinner();
+      render();
+    } else if (column5.includes(index)) {
+      let avail = -1;
+      for (const cell of column5) {
+        if (board[cell] === "") {
+          avail = cell;
+        }
+      }
+
+      board[avail] = turn;
+      turn = turn === "red" ? "yellow" : "red";
+      win = getWinner();
+      render();
+    } else if (column6.includes(index)) {
+      let avail = -1;
+      for (const cell of column6) {
+        if (board[cell] === "") {
+          avail = cell;
+        }
+      }
+
+      board[avail] = turn;
+      turn = turn === "red" ? "yellow" : "red";
+      win = getWinner();
+      render();
+    } else if (column7.includes(index)) {
+      let avail = -1;
+      for (const cell of column7) {
+        if (board[cell] === "") {
+          avail = cell;
+        }
+      }
+
+      board[avail] = turn;
+      turn = turn === "red" ? "yellow" : "red";
+      win = getWinner();
+      render();
     }
-
-    // if (board[index + ((index - (35 + index)) * (-1))] === "") {
-    //   console.log(1);
-    //   board[index + ((index - (35 + index)) * (-1))] = turn;
-    //   turn = turn === "red" ? "yellow" : "red";
-    //   win = getWinner();
-    //
-    //   render()
-    // } else if (board[index + ((index - (35 + index)) * (-1))] !== "") {
-    //   console.log(2);
-    //   board[index + ((index - (28 + index)) * (-1))] = turn;
-    //   turn = turn === "red" ? "yellow" : "red";
-    //   win = getWinner();
-    //
-    //   render()
-    // } else if ((board[index + ((index - (28 + index)) * (-1))] !== "")) {
-    //   console.log(3);
-    //   board[index + ((index - (21 + index)) * (-1))] = turn;
-    //   turn = turn === "red" ? "yellow" : "red";
-    //   win = getWinner();
-    //
-    //   render()
-    // } else if (board[index + ((index - (21 + index)) * (-1))] !== "") {
-    //   board[index + ((index - (14 + index)) * (-1))] = turn;
-    //   turn = turn === "red" ? "yellow" : "red";
-    //   win = getWinner();
-    //
-    //   render()
-    // } else if (board[index + ((index - (14 + index)) * (-1))] !== "") {
-    //   board[index + ((index - (7 + index)) * (-1))] = turn;
-    //   turn = turn === "red" ? "yellow" : "red";
-    //   win = getWinner();
-    //
-    //   render()
-    // } else if (board[index + ((index - (7 + index)) * (-1))] !== "") {
-    //   board[index + ((index - (0 + index)) * (-1))] = turn;
-    //   turn = turn === "red" ? "yellow" : "red";
-    //   win = getWinner();
-    //
-    //   render()
-    // }
-
-
   }
 }
 
@@ -297,3 +326,7 @@ function resetScoreboard() {
     o_score.innerHTML = o_wins
     tie_score.innerHTML = ties
 }
+
+document.getElementById("homeButton").onclick = function () {
+        location.href = "index.html";
+    };

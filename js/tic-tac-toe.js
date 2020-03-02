@@ -48,10 +48,10 @@ function whoGoesFirst() {
 
     a = String(a)
 
-    if (a != "X" && a != "x" && a != "O" && a != "o") {
+    if (a != "X" && a != "O") {
       alert("Invalid value. Please type either X or O.")
     }
-  } while (a != "X" && a != "x" && a != "O" && a != "o" && a != null)
+  } while (a != "X" && a != "O" && a != null)
 
   return a
 }
@@ -120,3 +120,7 @@ function resetScoreboard() {
     o_score.innerHTML = o_wins
     tie_score.innerHTML = ties
 }
+
+document.getElementById("homeButton").onclick = function () {
+        location.href = "index.html";
+    };

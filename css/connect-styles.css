@@ -91,6 +91,7 @@ p {
    user-select: none;
    width: 150px;
    background-color: lightgrey;
+   border-radius: 300px;
  }
 
 /*
@@ -144,6 +145,17 @@ p {
   margin: 2%;
 }
 
+.home {
+  background-color: red;
+  border: 1px solid black;
+  color: black;
+  text-shadow: 3px;
+  font-size: 21px;
+  line-height: 40px;
+  margin: 1%;
+  text-align: center;
+  width: 300px;
+}
 #reset-button {
   background-color: white;
   border: 1px solid black;
