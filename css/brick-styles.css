@@ -1,19 +1,63 @@
-body
-{
-  padding: 50px 0;
-  margin: 0;
+#current {
+  float: center;
+  color: purple;
+  font-weight: bold;
+  font-family: "Courier", monospace;
+  font-size: 24px;
 }
 
-#myGameCanvas
-{
+* {
+  background-color: beige;
+}
+
+body {
+  text-align: center;
+  font-family: "Courier", monospace;
+}
+
+/*
+ * The header has a different font than the rest of the page. It's the
+ * title, so it makes sense to make it a little different (and bigger).
+ */
+
+h1 {
+  margin: 0 auto;
+  font-family: "Courier", monospace;
+  font-size: 70px;
+  color: red;
+
+  margin: 2%;
+}
+
+/*
+ * The subheader (which let's us know whose turn it is) is a little smaller
+ * and less prominent.
+ */
+
+h2 {
+  font-size: 36px;
+  font-weight: lighter;
+  margin: 2%;
+}
+
+h3 {
+  font-size: 36px;
+  font-weight: lighter;
+  margin: 2%;
+}
+
+p {
+  font-size: 16px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+canvas {
   display: block;
-  margin: 0 auto;
-
-  box-shadow: 0 0 3px rgb(0, 0, 0);
-}
-
-p
-{
-  width: 800px;
-  margin: 0 auto;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  border: 4px solid black;
+  background-color: gold;
+  margin-left: auto;
+  margin-right: auto;
 }
